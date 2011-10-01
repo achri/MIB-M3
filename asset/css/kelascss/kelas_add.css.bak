@@ -1,0 +1,90 @@
+#contentLeft {
+	float: left;
+	height: 200px;
+	border: #CCCCCC solid 1px;
+	overflow: auto;
+}
+
+#contentLeft li {
+	list-style: none;
+	background-color:#00CCCC;
+	margin: 0 0 1px 0;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+}
+
+#contentCat {
+	float: left;
+	height: 260px;
+	border: #CCCCCC solid 1px;
+	overflow: auto;
+}
+
+#contentCat li {
+	list-style: none;
+	background-color:#00CCCC;
+	margin: 0 0 1px 0;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+}
+
+#space { 
+	float: left; 
+	width: 80px;
+	height: 40px;
+}
+
+#keterangan {
+    float: left;
+	border: #CCCCCC solid 1px;
+    width: 250px;
+	height : 200px;
+	font: arial;
+}
+
+
+.droparea {
+    float: left;
+    background-color: #EFEFE0;
+    border: 1px solid #FFFFFF;
+    width: 250px;
+	height : 40px;
+}
+
+.dropareahover {
+    background-color:#EFD2A4;
+    border-color:#DFA853;
+}
+
+.droparea2 {
+    float: left;
+    background-color: #EFEFE0;
+    border: 1px solid #FFFFFF;
+    width: 250px;
+	height : 40px;
+}
+
+.droparea2hover {
+    background-color:#EFD2A4;
+    border-color:#DFA853;
+}
+
+
+#result {
+overflow: auto;	
+height : 220px;
+}
+
+#result li {
+	list-style: none;
+	background-color:#00CCCC;
+	margin: 0 0 1px 0;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+}

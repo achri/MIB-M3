@@ -1,0 +1,51 @@
+.labelcell {
+ font: 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #3670A7;
+ background-color: transparent;
+}
+
+.fieldcell {
+ background-color: #F2F7FB;
+ color: #000000;
+ text-align: left;
+ margin-right: 0px;
+ padding-right: 0px;
+}
+
+.fieldcell input {
+ font: 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #102132;
+} 
+
+.fieldcell select{
+ font: 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #102132;
+} 
+
+.fieldcell textarea{
+ font: 13px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #102132;
+}
+
+.labelcell2 {
+ font: 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+ color: #3610A7;
+ background-color: transparent;
+ font-style: oblique;
+ font-weight: bold;
+}
+
+	tr.a {
+	color: #CCCCCC;
+	font-weight: bold;
+	background-color: #666666;
+	text-align: center;
+	}
+	tr.mouseover { 
+	  color: white; 
+	  background: #FF9900; 
+	  font-family:arial;
+	} 
+	tr.mouseout { 
+	  font-family:arial;
+	} 

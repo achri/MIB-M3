@@ -1,0 +1,11 @@
+function show(page,div){ 
+var site = "http://localhost/ci_purchase/index.php/";
+	$.ajax({
+		url:""+site+""+page+"",
+		success: function(response){			
+    		$(div).html(response);
+  		},
+  		dataType:"html"  		
+  	});
+  	return false;
+};

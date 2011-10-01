@@ -1,0 +1,103 @@
+<?php if (!defined('BASEPATH')) exit('No direct script access allowed');
+
+/*
+* Excel library for Code Igniter applications
+* Author: Derek Allard, Dark Horse Consulting, www.darkhorse.to, April 2006
+*/
+function xmlhmllfilter($text){
+        $text = str_replace(' ', '', $text);    
+        $text = str_replace('&lt;BR&gt;', '<br />', htmlspecialchars($text));
+        return $text;
+}
+function to_excel($query, $filename='exceloutput')
+{
+        $headers = ''; // just creating the var for field headers to append to below
+        $data = ''; // just creating the var for field data to append to below
+        $footers = '';
+        
+        $obj =& get_instance();
+        
+        $fields = $query->field_data();
+        if ($query->num_rows() == 0) {
+                echo '<p>The table appears to have no data.</p>';
+        } else {
+                $headers .= "<?xml version='1.0'?>
+                <?mso-application progid='Excel.Sheet'?>
+                <Workbook xmlns='urn:schemas-microsoft-com:office:spreadsheet' xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:x='urn:schemas-microsoft-com:office:excel' xmlns:ss='urn:schemas-microsoft-com:office:spreadsheet' xmlns:html='http://www.w3.org/TR/REC-html40'>
+                ";
+                $headers.='
+                 <Styles>
+                 <Style ss:ID="Default" ss:Name="Normal">
+                   <Alignment ss:Vertical="Center"/>
+                   <Borders/>
+                   <Font x:CharSet="238" ss:FontName="Tahoma" x:Family="Swiss"/>
+                   <Interior/>
+                   <NumberFormat/>
+                   <Protection/>
+                  </Style> 
+                  <Style ss:ID="s28">
+                   <Borders>
+                    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                   </Borders>
+                  </Style>                
+                  <Style ss:ID="s27">
+                   <Borders>
+                            <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+                            <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+                            <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+                            <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+                   </Borders>
+                   <Font ss:Color="#FF0000" ss:Bold="1"/>
+                   <Interior ss:Color="#FFFF00" ss:Pattern="Solid"/>
+                   <NumberFormat ss:Format="Standard"/>
+                  </Style>
+                 </Styles>                              
+                ';
+                $headers .="
+                <Worksheet ss:Name='".$filename."'>
+                <Table>";
+                //setting column with
+                foreach ($fields as $field) {
+                   $headers .= '<Column ss:AutoFitWidth="1" ss:Width="100"/>';
+                }               
+                                
+                $headers .='<Row ss:AutoFitHeight="0" ss:Height="21">';
+                
+                //creating header 
+                foreach ($fields as $field) {
+                   $headers .= "<Cell ss:StyleID='s27'><Data ss:Type='String'>".strtoupper ($field->name) . "</Data></Cell>";
+                }
+                $headers .="</Row>";
+                
+                
+                //creating rows
+                foreach ($query->result() as $row) {
+                        $line = '';
+                        foreach($row as $value) {                                            
+                                $line .= "<Cell ss:StyleID='s28'><Data ss:Type='String'>". xmlhmllfilter($value) ."</Data></Cell>";
+                        }
+                        $data .= "<Row>".trim($line)."</Row>";
+                }
+                
+                $footers = "</Table>";
+                $footers .='
+                  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+                   <Print>
+                    <ValidPrinterInfo/>
+                    <PaperSizeIndex>9</PaperSizeIndex>
+                    <HorizontalResolution>600</HorizontalResolution>
+                    <VerticalResolution>0</VerticalResolution>
+                   </Print>
+                   <Selected/>
+                   <ProtectObjects>False</ProtectObjects>
+                   <ProtectScenarios>False</ProtectScenarios>
+                  </WorksheetOptions>
+                ';
+                $footers .="</Worksheet></Workbook>";   
+                                
+                echo "$headers.$data.$footers"; 
+        }
+}
+?>

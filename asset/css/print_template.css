@@ -1,0 +1,45 @@
+/* print only */
+.noprint	{display:none !important;}
+
+body{
+margin-top: 0px;
+margin-right: 2px;
+margin-left: 10px;
+text-align:left;
+font-family: verdana, arial, sans-serif;
+font-size: 10pt;
+background: #FFFFFF;
+}
+
+/* Layout */
+/*
+#pagewidth{
+width:938px;
+text-align:left;
+margin:0px;
+}
+*/
+#main_head, #myMenuID{
+  display: none !important;
+}
+
+.tbl_outline {
+	border: 1px solid #000000;
+}
+
+td.tbl_outline{
+    border-left: none;
+	border-top: none;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+.tbl_outline_supplier {
+    border-left, border-top, border-right: none;
+	border-bottom: 1px solid #000000;
+}
+/*
+* {
+ color: #000000 !important;
+}
+*/

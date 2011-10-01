@@ -1,0 +1,117 @@
+.cols-1 {
+	float: left;
+	height: 320px;
+	overflow: auto;
+	width : 230px;
+}
+
+.cols-2 {
+	float: left;
+	height: 320px;
+	width : 85px;
+}
+
+#contentLeft {
+	height: 70px;
+	overflow: auto;
+}
+
+#contentLeft li {
+	list-style: none;
+	background-color:#00CCCC;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+	font-size: 12px;
+}
+
+#contentCat {
+	float: left;
+	height: 290px;
+	border: #CCCCCC solid 1px;
+	overflow: auto;
+}
+
+#contentCat li {
+	list-style: none;
+	background-color:#00CCCC;
+	border: #CCCCCC solid 1px;
+	padding: 2px;
+	color:#fff;
+	width: 200px;
+	font-size: 12px;
+}
+
+#space { 
+	float: left; 
+	width: 80px;
+	height: 40px;
+}
+
+#keterangan {
+    float: left;
+    width: 250px;
+	height : 120px;
+	font: verdana;
+	font-size: 12px;
+}
+
+.droparea {
+    background-color: #EFEFE0;
+    border: 1px solid #FFFFFF;
+    width: 205px;
+	height : 20px;
+}
+
+.dropareahover {
+    background-color:#EFD2A4;
+    border-color:#DFA853;
+}
+
+.droparea2 {
+    background-color: #EFEFE0;
+    border: 1px solid #FFFFFF;
+    width: 205px;
+	height : 20px;
+}
+
+.droparea2hover {
+    background-color:#EFD2A4;
+    border-color:#DFA853;
+}
+
+#result {
+/*overflow: auto;*/
+height : 70px;
+}
+
+#result li {
+	list-style: none;
+	background-color:#00CCCC;
+	margin: 0 0 1px 0;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+}
+
+#result2 {
+overflow: auto;
+height : 100px;
+}
+
+#result2 li {
+	list-style: none;
+	background-color:#00CCCC;
+	margin: 0 0 1px 0;
+	padding: 2px;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+	width: 200px;
+}
+
+/* Label caption */
+.label {
+	font-weight:bold;
+}

@@ -1,0 +1,47 @@
+#cat1, #cat2 { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	margin-right: 10px; 
+	background: #E1E6FA; 
+	padding: 5px; 
+	width: 180px; 
+	height: 250px; 
+	overflow: auto;
+}
+
+#space { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	margin-right: 10px; 
+	background: #fff; 
+	padding: 5px; 
+	width: 90px; 
+	height: 250px;
+}
+
+#spaceleft { 
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	margin-right: 10px; 
+	background: #fff; 
+	padding: 5px; 
+	width: 15px; 
+	height: 250px;
+}
+
+#cat1 li, #cat2 li { 
+	margin: 5px; 
+	padding: 5px; 
+	font-size: 12px; 
+	width: 150px; 
+	list-style: none;
+	background-color: #00CCCC;
+	border: #CCCCCC solid 1px;
+	color: #fff;
+}

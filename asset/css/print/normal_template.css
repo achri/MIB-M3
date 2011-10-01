@@ -1,0 +1,19 @@
+#main_head, #myMenuID{
+  display: block !important;
+}
+
+.tbl_outline {
+	border: 1px solid #000000;
+}
+
+td.tbl_outline{
+    border-left: none;
+	border-top: none;
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+
+.tbl_outline_supplier {
+    border-left, border-top, border-right: none;
+	border-bottom: 1px solid #000000;
+}

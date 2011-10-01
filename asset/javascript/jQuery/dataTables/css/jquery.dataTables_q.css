@@ -1,0 +1,129 @@
+/* DATA TABLES FUTURED */
+
+.dataTables_wrapper {
+	position: relative;
+	min-height: 302px;
+	_height: 302px;
+	clear: both;
+}
+
+.dataTables_processing {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	width: 250px;
+	margin-left: -125px;
+	border: 1px solid #ddd;
+	text-align: center;
+	color: #999;
+	font-size: 11px;
+	padding: 2px 0;
+}
+
+.dataTables_length {
+	width: 40%;
+	float: left;
+}
+
+.dataTables_filter {
+	width: 50%;
+	float: right;
+	text-align: right;
+}
+
+.dataTables_info {
+	top:320px;
+	width: 60%;
+	float: left;
+}
+
+.dataTables_paginate {
+	top:320px;
+	width: 44px;
+	* width: 50px;
+	float: right;
+	text-align: right;
+}
+
+/* SORTING */
+
+.sorting_asc {
+	background: url('../images/sort_asc.png') no-repeat center right;
+}
+
+.sorting_desc {
+	background: url('../images/sort_desc.png') no-repeat center right;
+}
+
+.sorting {
+	background: url('../images/sort_both.png') no-repeat center right;
+}
+
+/* ROLLOVER */
+
+/*#product_list tbody tr.even td.highlighted*/
+#product_list tbody tr.even:hover {
+	background-color: #ECFFB3;
+}
+/*#product_list tbody tr.odd td.highlighted */
+#product_list tbody tr.odd:hover {
+	background-color: #E6FF99;
+}
+
+/* PAGINATION BUTTON */
+
+.paginate_disabled_previous, .paginate_enabled_previous, .paginate_disabled_next, .paginate_enabled_next {
+	height: 19px;
+	width: 19px;
+	margin-left: 3px;
+	float: left;
+}
+
+.paginate_disabled_previous {
+	background-image: url('../images/back_disabled.jpg');
+}
+
+.paginate_enabled_previous {
+	background-image: url('../images/back_enabled.jpg');
+}
+
+.paginate_disabled_next {
+	background-image: url('../images/forward_disabled.jpg');
+}
+
+.paginate_enabled_next {
+	background-image: url('../images/forward_enabled.jpg');
+}
+
+.dataTables_info {
+	width: 40%;
+}
+
+.dataTables_paginate {
+	width: 400px;
+	height: 22px;
+	line-height: 22px;
+}
+
+.dataTables_paginate .paginate_button,
+ 	.dataTables_paginate .paginate_active {
+	border: 1px solid #aaa;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 2px 5px;
+	margin: 0 3px;
+	cursor: pointer;
+	*cursor: hand;
+}
+
+.dataTables_paginate .paginate_button {
+	background-color: #ddd;
+}
+
+.dataTables_paginate .paginate_button:hover {
+	background-color: #ccc;
+}
+
+.dataTables_paginate .paginate_active {
+	background-color: #99B3FF;
+}
